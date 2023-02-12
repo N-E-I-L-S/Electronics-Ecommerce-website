@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FilterFunctions(state, action) {
     switch (action.type) {
         case 'LOAD_FILTER_PRODUCTS':

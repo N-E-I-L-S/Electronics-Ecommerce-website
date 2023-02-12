@@ -189,21 +189,25 @@ hr{
     align-items: center;
     height: 100vh;
     padding-top: 3rem;
-    background: linear-gradient(-45deg, #bde0ff, #e1ffeb, #ffe1fe);
+    /* background: linear-gradient(-45deg, #bde0ff, #e1ffeb, #ffe1fe);
     animation: gradient 5s ease infinite;
-    background-size: 400% 400%;
+    background-size: 400% 400%; */
 }
 
 .hero-image {
-    animation: fadeIn ease 3s;
+    /* animation: fadeIn ease 3s; */
     padding: 1rem 0 0.8rem 0;
-    height: 75vh;
+    height: 85vh;
     width: 75vw;
+}
+.hero-img-div{
+    height: 85vh;
 }
 
 .section-empty {
-    height: 75vh;
-    width: 75vw;
+    height: 97%;
+    width: 97%;
+    min-height: 40vh;
     border-radius: 12px;
     padding: 1rem 0 0.8rem 0;
     background: linear-gradient(-90deg, #dddddd, #999999, #dddddd);
@@ -211,22 +215,19 @@ hr{
     background-size: 400% 400%;
 }
 
-.hero-product-details {
-    width: 75vw;
+/* .hero-product-details {
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.85));
     padding: 0 3vw 20vh 3vw;
-    height: 25vh;
     opacity: 0;
     color: white;
-}
+} */
 
-.hero-img-div:hover .hero-product-details {
+/* .hero-img-div:hover .hero-product-details {
     animation: heroanimate ease-in 0.1ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
+} */
 
 .featured {
     height: fit-content;
@@ -445,15 +446,15 @@ hr{
 }
 
 .all-products {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 
 .all-products-head {
+    min-width: 61vw;
     margin: 0 4rem;
     display: flex;
     justify-content: space-between;
 }
-
 .categories {
     margin: 1rem 0 0 0;
 }
@@ -535,9 +536,9 @@ hr{
 
 .oneproduct-color {
     margin-top: 1rem;
-    width: 1.3rem;
-    height: 1.3rem;
-    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    /* border-radius: 100%; */
     margin-right: 0.2rem;
     border: 0px;
     opacity: 0.5;
@@ -545,6 +546,7 @@ hr{
 }
 .oneproduct-color-active{
     opacity: 1;
+
 }
 .oneproduct-btn{
     border: 0;
@@ -580,6 +582,13 @@ hr{
     width: 14vw;
     font-weight: bold;
     font-size: large;
+}
+.cart-total-stats{
+    margin-bottom: 1rem;
+    padding: 0.33rem 1rem;
+    width: fit-content;
+    border-radius: 2px;
+    background-color: #999999;
 }
 .cart-foot{
     width: 90%;

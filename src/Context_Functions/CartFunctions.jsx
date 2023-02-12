@@ -47,7 +47,6 @@ export default function CartFunctions(state, action) {
                     else {
                         newquantity = element.quantity + 1;
                     }
-                    console.log(newquantity)
                     return {
                         ...element,
                         quantity: newquantity
@@ -80,6 +79,27 @@ export default function CartFunctions(state, action) {
             return {
                 ...state,
                 cart: decproduct
+            }
+        case 'TOTAL_PRODUCTS':
+            let totalpro = state.cart.reduce((init, i)=>{
+                    let {quantity} = i;
+                    init= init+quantity;
+                    return init;
+            },0)
+            console.log(totalpro)
+            return{
+                ...state,
+                total_products: totalpro,
+            }
+        case 'TOTAL_PRICE':
+            let totalamt = state.cart.reduce((init, i)=>{
+                let {price, quantity} = i;
+                init = init + price*quantity;
+                return init;
+            },0)
+            return{
+                ...state,
+                total_amount : totalamt
             }
     }
 }

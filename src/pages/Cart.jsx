@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar";
 import useCartContext from "../Context_Functions/CartContext"
 
 export default function Cart() {
-  const { cart, emptycart, removeItem, incrementItem, decrementItem } = useCartContext();
-
+  const { cart, emptycart, removeItem, incrementItem, decrementItem, total_amount } = useCartContext();
+  console.log(total_amount)
   return (
     <>
       <Navbar />
@@ -23,7 +23,10 @@ export default function Cart() {
               Color
             </div>
             <div className="cart-col-header">
-              Quant.
+              Quantity
+            </div>
+            <div className="cart-col-header">
+              Price per Item
             </div>
             <div className="cart-col-header">
               Remove
@@ -42,23 +45,34 @@ export default function Cart() {
                   <button className="oneproduct-color oneproduct-color-active" style={{ backgroundColor: `${i.color}`, marginTop: '0' }}></button>
                 </div>
                 <div className="cart-col">
-                  <button className="oneproduct-btn" onClick={()=>incrementItem(i.id)}>+</button> &ensp;
+                  <button className="oneproduct-btn" onClick={() => incrementItem(i.id)}>+</button> &ensp;
                   {i.quantity}  &ensp;
-                  <button className="oneproduct-btn bg-red" onClick={()=>decrementItem(i.id)}>-</button>
+                  <button className="oneproduct-btn bg-red" onClick={() => decrementItem(i.id)}>-</button>
+                </div>
+                <div className="cart-col">
+                  {i.price}
                 </div>
                 <div className="cart-col">
                   <button className="btn btn-danger" onClick={() => removeItem(i)}>Remove</button>
                 </div>
+
               </div>
             )
           })}</div>
-          <hr/>
+          <hr />
+          <div className="cart-total-stats">
+            <div className="cart-row">
+            <div className="cart-col">
+              Total Price: &ensp; {total_amount}
+            </div>
+            </div>
+          </div>
           <div className="cart-foot">
             <NavLink to='/home'>
               <button className="login-submit-btn no-margin">
-                 Continue Shopping
-                </button>
-                 </NavLink>
+                Continue Shopping
+              </button>
+            </NavLink>
             <button className="btn btn-dark h-50" onClick={emptycart}>Clear Cart</button>
           </div>
         </div>

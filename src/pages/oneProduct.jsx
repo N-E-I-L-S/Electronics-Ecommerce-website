@@ -49,9 +49,10 @@ export default function OneProduct() {
 
           {(colors || []).map((i) => {
             return <button className={usercolor === i ? "oneproduct-color oneproduct-color-active " : "oneproduct-color "} key={i} style={{ backgroundColor: `${i}` }} onClick={() => setUserColor(i)}>
-              {usercolor === i ? usercolor === '#000000' ? <FaCheck size={10.5} style={{ color: 'white' }} /> : <FaCheck size={10.5} /> : null}
+              {usercolor === i ?  <FaCheck color={usercolor}/> : null}
             </button>
-          })} <br />
+          })} 
+          <br />
 
           <button className="oneproduct-btn" onClick={Increment}>+</button> &emsp;
           {quantity}&emsp;

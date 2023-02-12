@@ -14,7 +14,6 @@ export function CartProvider({children}) {
     }
 
     function incrementItem(id){
-        console.log(id)
         dispatch({type: 'INCREMENT_ITEM', payload:id})
     }
     function decrementItem(id){
@@ -51,6 +50,8 @@ export function CartProvider({children}) {
     }
 
     useEffect(()=>{
+        dispatch({type: 'TOTAL_PRICE'})
+        dispatch({type: 'TOTAL_PRODUCTS'})
         const cartdatastore = JSON.stringify(state.cart)
         localStorage.setItem("Cart", cartdatastore )
     },[state.cart])

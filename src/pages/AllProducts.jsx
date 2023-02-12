@@ -5,12 +5,11 @@ import { useEffect } from "react"
 
 export default function AllProducts() {
 
-    const { filterproducts, all_products, sorting, filter: { text, category }, updateFilterValue, getUniqueValue, ClearFilters } = useFilterContext()
+    const { filterproducts, all_products, sorting, filter: { text, category }, updateFilterValue, getUniqueValue, ClearFilters, filterproductnull } = useFilterContext()
 
 
     const uniqueCategory = getUniqueValue(all_products, "category");
     const uniqueCompany = getUniqueValue(all_products, "company")
-
     return (
         <>
             <Navbar />
@@ -21,6 +20,7 @@ export default function AllProducts() {
                         <form action="#">
                             <label htmlFor="sort"></label>
                             <select name="sort" id="sort" onClick={sorting}>
+                                <option value="" disabled>~None~</option>
                                 <option value="lowest">Price(Lowest to Highest)</option>
                                 <option value="highest">Price(Highest to Lowest)</option>
                                 <option value="a-z">A-Z</option>
@@ -56,7 +56,6 @@ export default function AllProducts() {
                 </div>
                 <div className="all-products">
                     <div className="all-products-head">
-
                         <h2>All Products</h2>
                         <div className="filter-search">
                             <form onSubmit={(e) => e.preventDefault()}>

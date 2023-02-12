@@ -22,9 +22,10 @@ export default function HeroSection() {
         <NavLink to={`/oneproduct/${heroproduct.id}`}>
           <figure>
             <img className='hero-image' src={heroproduct.image || ""} alt="Newly Featured" />
+            
           </figure>
         </NavLink>
-        <div className="hero-product-details">
+        {/* <div className="hero-product-details">
           <div>
             <h4>
 
@@ -37,7 +38,7 @@ export default function HeroSection() {
               ₹{heroproduct.price}
             </h4>
           </div>
-        </div>
+        </div> */}
         </div>
       </div>
     </>
