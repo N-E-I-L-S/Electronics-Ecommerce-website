@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useReducer } from 'react'
 import reducer from './ProductsFunctions';
 
 const ProductsContext = createContext();
-const url = 'https://api.pujakaitem.com/api/products'
+const url = 'http://localhost:3001/products/'
 export function ProductsProvider({ children }) {
     const initialstate = {
         isLoading: false,

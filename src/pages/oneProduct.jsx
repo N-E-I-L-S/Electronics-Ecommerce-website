@@ -3,11 +3,11 @@ import { useEffect, useState } from "react"
 import useProducts from "../Context_Functions/ProductsContext"
 import Navbar from "../components/Navbar"
 import Image from "../components/Image"
-import ProductImage from "../components/ProductImage"
+// import ProductImage from "../components/ProductImage"
 import { FaCheck } from 'react-icons/fa'
 import useCartContext from "../Context_Functions/CartContext"
 
-const url = 'https://api.pujakaitem.com/api/products'
+const url = 'http://localhost:3001/products/'
 
 export default function OneProduct() {
   const { addToCart } = useCartContext();
@@ -27,7 +27,7 @@ export default function OneProduct() {
 
 
   useEffect(() => {
-    getSingleProduct(`${url}?id=${productId.id}`)
+    getSingleProduct(`${url}/id/${productId.id}`)
     console.log(singleproduct)
   }, [])
   if (issingleloading)
@@ -38,7 +38,8 @@ export default function OneProduct() {
       <Navbar />
       <div className="one-product-page">
         <div className="oneproduct-image-layout">
-          <ProductImage image={image} />
+          <img style={{width: "50%"}} src={image} alt="" />
+          {/* <ProductImage image={image} /> */}
         </div>
         <div className="oneproduct-details-section">
           <b>{name}</b> <br />
