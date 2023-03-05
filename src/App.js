@@ -9,6 +9,7 @@ import AllProducts from "./pages/AllProducts";
 import Profile from "./pages/Profile";
 import ForgotPassword from "./pages/ForgotPassword";
 import Signup from "./pages/Signup";
+import AddProducts from "./pages/AddProducts";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/allproducts' element={<AllProducts />} />
           <Route path='/oneproduct/:id' element={<OneProduct />} />
+          <Route path='/addproduct' element={<AddProducts />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/forgotpass' element={<ForgotPassword />} />
           <Route path='/signup' element={<Signup />} />

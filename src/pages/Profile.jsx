@@ -15,6 +15,7 @@ export default function Profile() {
           <NavLink to='/'>
             <button className="btn btn-danger" onClick={logout}>Logout</button>
           </NavLink>
+          
         </div>
       </div>
     </>

@@ -25,7 +25,6 @@ router.get('/id/:id', function (req, res, next) {
 
 // add a new Product 
 router.post('/',function(req,res,next){
-    console.log(req.body.user);
     Products.create(req.body).then(function(product){
         res.send(product);
     }).catch(next);
@@ -48,10 +47,10 @@ router.delete('/:id',function(req,res,next){
 });
 
 // delete all Products
-// router.delete('/',function(req,res,next){
-//     Products.deleteMany(req.body).then(function(product){
-//         res.send(product);
-//     }).catch(next);
-// });
+router.delete('/',function(req,res,next){
+    Products.deleteMany(req.body).then(function(product){
+        res.send(product);
+    }).catch(next);
+});
 
 module.exports = router
