@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import ForgotPassword from "./pages/ForgotPassword";
 import Signup from "./pages/Signup";
 import AddProducts from "./pages/AddProducts";
+// import PaymentCheckout from "./pages/PaymentCheckout";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/allproducts' element={<AllProducts />} />
           <Route path='/oneproduct/:id' element={<OneProduct />} />
           <Route path='/addproduct' element={<AddProducts />} />
+          {/* <Route path='/pay' element={<PaymentCheckout />} /> */}
           <Route path='/profile' element={<Profile />} />
           <Route path='/forgotpass' element={<ForgotPassword />} />
           <Route path='/signup' element={<Signup />} />

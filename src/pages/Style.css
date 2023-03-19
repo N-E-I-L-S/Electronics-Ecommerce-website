@@ -634,3 +634,44 @@ hr{
 .profile-details{
     padding: 4vh 0;
 }
+
+/* Add Products */
+.addproducts-page{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.addproducts-outerdiv{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid grey;
+}
+.addproducts-outerdiv:hover{
+    box-shadow: 10px 10px 7px grey;
+}
+.addproduct-div{
+    padding: 0.5rem 0;
+}
+.addproduct-div input{
+    margin-top: 0.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+.addproduct-div input:focus{
+    background-color: #dc3545;
+    color: white;
+}
+.addproducts-btn{
+    margin-top: 1rem;
+    border: 1px solid #dc3545;
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+    background-color:#dc3545;
+    color: white;
+}
+.addproducts-btn:hover{
+    background-color: white;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
